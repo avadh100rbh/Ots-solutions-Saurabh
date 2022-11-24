@@ -25,7 +25,7 @@ function timerCycle() {
 
         sec = sec + 1
 
-        if(sec == 10) {
+        if(sec == 100) {
             min = min + 1;
             sec = 0;
         }
@@ -46,7 +46,7 @@ function timerCycle() {
         
         timer.innerHTML = hr +  ":" + min + ":" + sec;
 
-        setTimeout("timerCycle()", 100);
+        setTimeout("timerCycle()", 10);
 
 
     }
