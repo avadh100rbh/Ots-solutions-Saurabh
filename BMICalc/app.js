@@ -38,7 +38,8 @@
 //   .then((response) => response.json())
 //   .then((data) => console.log(data));
 
- const Api = fetch('https://restcountries.com/v2/name/india')
- .then((data)=>data.json())
- .then((response)=>console.log(response[1].borders)
- )
+//  const Api = fetch('https://restcountries.com/v2/name/india')
+//  .then((data)=>data.json())
+//  .then((response)=>console.log(response[1].borders)
+//  )
+
