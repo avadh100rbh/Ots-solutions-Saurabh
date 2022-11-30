@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        .container{
+
+            display: grid;
+
+            grid-template-columns: auto auto;
+
+        }
+
+        #container> div{
+
+            /* width: 30%; */
+
+            height: 10vh;
+
+            border: 2px solid ;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div style="grid-column-start:1 ; grid-column-end: 3; height: 18vh;"></div>
+
+        <div style="grid-column-start:1 ; grid-column-end: 3; height: 80vh;" class="container">
+
+        <div style=" border: 4px solid pink;"></div>
+
+        <div style=" border: 4px solid pink;"></div>
+
+        </div>
+
+        <div style="grid-column-start:1 ; grid-column-end: 3;" >item2</div>
+
+        
+
+    </div>
+
+</body>
+
+</html>
