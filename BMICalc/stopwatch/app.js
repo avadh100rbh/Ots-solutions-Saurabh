@@ -25,11 +25,11 @@ function timerCycle() {
 
         sec = sec + 1
 
-        if(sec == 100) {
+        if (sec == 100) {
             min = min + 1;
             sec = 0;
         }
-        if(min == 60) {
+        if (min == 60) {
             hr = hr + 1;
             min = 0;
             sec = 0;
@@ -43,15 +43,15 @@ function timerCycle() {
         if (hr < 10) {
             hr = "0" + hr
         }
-        
-        timer.innerHTML = hr +  ":" + min + ":" + sec;
+
+        timer.innerHTML = hr + ":" + min + ":" + sec;
 
         setTimeout("timerCycle()", 10);
 
 
     }
 }
-function resetTimer(){
+function resetTimer() {
     timer.innerHTML = "00:00:00";
     stoptime = true;
     hr = 0;
