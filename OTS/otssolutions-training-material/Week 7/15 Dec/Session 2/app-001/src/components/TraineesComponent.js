@@ -132,30 +132,101 @@ const TraineesComponent = () => {
     }
   }, [searchTerm]);
 
-  useEffect(() => {
-      let ascending = mockTraineesData.sort((a, b) => {
-        let fa = a.firstName;
-        let fb = b.firstName;
-        if (fa < fb) {
-          return -1;
-        }
-        if (fa > fb) {
-          return 1;
-        }
-        return 0;
-      });
-      if (name === 'ascending') {
-        setSearchedTraineesList(ascending);
-        setName('');
-        console.log(ascending,'<<<==ascending');
-    } else if (name === 'descending') {
-      setSearchedTraineesList(ascending.reverse());
-      setName('');
+  // useEffect(() => {
+  //     let ascending = mockTraineesData.sort((a, b) => {
+  //       let fa = a.firstName;
+  //       let fb = b.firstName;
+  //       if (fa < fb) {
+  //         return -1;
+  //       }
+  //       if (fa > fb) {
+  //         return 1;
+  //       }
+  //       return 0;
+  //     });
+  //     if (name === 'ascending') {
+  //       setSearchedTraineesList(ascending);
+  //       setName('');
+  //       console.log(ascending,'<<<==ascending');
+  //   } else if (name === 'descending') {
+  //     setSearchedTraineesList(ascending.reverse());
+  //     setName('');
 
-    }  
+  //   }  
 
-  }, [name]);
+  // }, [name]);
 // {console.log('mockTraineesData==>>>',mockTraineesData);}
+useEffect(() => {
+
+  if (name === 'ascending') {
+
+    let ascending = mockTraineesData.sort((a, b) => {
+
+      let fa = a.firstName;
+
+      let fb = b.firstName;
+
+      if (fa > fb) {
+
+        return 1;
+
+      }
+
+      if (fa < fb) {
+
+        return -1;
+
+      }
+
+      return 0;
+
+    });
+
+    setTraineesList(ascending);
+
+    setName('');
+
+    console.log(ascending,'<<<==ascending');
+
+  } else if (name === 'descending') {
+
+    let descending = mockTraineesData.sort((a, b) => {
+
+      let fa = a.firstName;
+
+      let fb = b.firstName;
+
+      if (fa < fb) {
+
+        return 1;
+
+      }
+
+      if (fa > fb) {
+
+        return -1;
+
+      }
+
+      return 0;
+
+    });
+
+    setTraineesList(descending);
+
+    setName('');
+
+    console.log(descending,'<<<==descending');
+
+  } else {
+
+    setSearchedTraineesList(mockTraineesData);
+
+    // console.log("searched",searchedTraineesList);
+
+  }
+
+}, [name]);
   return (
     <>
       <Header as="h1">Trainees</Header>
